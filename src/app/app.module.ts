@@ -12,6 +12,9 @@ import { SignInComponent } from './componente/sign-in/sign-in.component';
 import { SignUpComponent } from './componente/sign-up/sign-up.component';
 import { EsqueceuSenhaComponent } from './componente/esqueceu-senha/esqueceu-senha.component';
 import { VerifiqueEmailComponent } from './componente/verifique-email/verifique-email.component';
+import { AuthService } from './shared/services/auth-service';
+
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -27,9 +30,10 @@ import { VerifiqueEmailComponent } from './componente/verifique-email/verifique-
     AppRoutingModule,
     AngularFireModule.initializeApp(environment.firebase),
     AngularFireAuthModule,
-    AngularFirestoreModule
+    AngularFirestoreModule,
+    ReactiveFormsModule
   ],
-  providers: [],
+  providers: [AuthService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

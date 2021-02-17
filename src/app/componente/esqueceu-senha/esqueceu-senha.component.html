@@ -1,1 +1,17 @@
-<p>esqueceu-senha works!</p>
+<div class="displayTable">
+    <div class="displayTableCell">
+        <div class="authBlock">
+            <h3>Redefinir Senha</h3>
+            <p class="text-center">Por favor, digite seu endereço de e-mail para solicitar uma nova senha.</p>
+            <div class="formGroup">
+                <input type="email" class="formControl" placeholder="Digite seu e-mail" #passwordRedefinirEmail required>
+            </div>
+            <div class="formGroup">
+                <input type="submit" class="btn btnPrimary" value="Redefinir Senha" (click)="authService.ForgotPassword(passwordRedefinirEmail.value)">
+            </div>
+        </div>
+        <div class="redirectToLogin">
+            <span>Voltar:<span class="redirect" routerLink="/sign-in"></span></span>
+        </div>
+    </div>
+</div>

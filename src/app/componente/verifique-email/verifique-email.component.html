@@ -1,1 +1,19 @@
-<p>verifique-email works!</p>
+<div class="displayTable">
+    <div class="displayTableCell">
+        <div class="authBlock">
+            <h3>Obrigado por se Cadastrar</h3>
+        </div>
+        <div class="formGroup" *ngIf="authService.usuarioData as usuario">
+            <p class="text-center">Enviamos um email de confirmação para<strong>{{usuario.email}}</strong></p>
+            <p class="text-center">Verifique seu e-mail e clique no link para verificar seu endereço de e-mail</p>
+        </div>
+        <div class="formGroup">
+            <button type="button" class="btn btnPrimary" (click)="authService.SendVerificationMail()">
+            <i class="fas fa-redo-alt"></i>Reinviando Verificação de e-mail
+          </button>
+        </div>
+    </div>
+    <div class="redirectToLogin">
+        <span>Voltar?<span class="redirect" routerLink="/sign-in">Entrar</span></span>
+    </div>
+</div>
