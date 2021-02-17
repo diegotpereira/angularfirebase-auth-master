@@ -121,5 +121,8 @@
       }
     }
   },
-  "defaultProject": "angularfirebase-auth-master"
+  "defaultProject": "angularfirebase-auth-master",
+  "cli": {
+    "analytics": false
+  }
 }
